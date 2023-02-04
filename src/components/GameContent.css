@@ -1,0 +1,71 @@
+:root {
+    --char-w: 1ch;
+    --gap: calc(.5 * var(--char-w));
+    --n-char: 7;
+    --in-w: calc(var(--n-char) * calc(var(--char-w) + var(--gap)));
+}
+
+.GameContent {
+    height: 80vh;
+
+    display: grid;
+    place-items: center;
+
+    color: white;
+    font-size: 4rem;
+}
+
+.container {
+    margin: 0 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag {
+    font-size: 2rem;
+    background: rgba(255,134,58,0.95);
+    width: max-content;
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
+
+input {
+    display: block;
+    margin: 2em auto;
+    border: none;
+    padding: 0;
+    width: var(--in-w);
+    background: repeating-linear-gradient(90deg,
+    dimgrey 0, dimgrey var(--char-w),
+    transparent 0, transparent calc(var(--char-w) + var(--gap))) 0 100%/ calc(var(--in-w) - var(--gap)) 1rem no-repeat;
+    font: 5ch droid sans mono, consolas, monospace;
+    letter-spacing: var(--gap);
+}
+
+input:focus {
+     outline: none;
+}
+
+.error {
+    animation: shake 0.2s ease-in-out 0s 2;
+    color: red;
+    background: repeating-linear-gradient(90deg,
+    red 0, red var(--char-w),
+    transparent 0, transparent calc(var(--char-w) + var(--gap))) 0 100%/ calc(var(--in-w) - var(--gap)) 1rem no-repeat;
+}
+
+.success {
+    color: green;
+    background: repeating-linear-gradient(90deg,
+    green 0, green var(--char-w),
+    transparent 0, transparent calc(var(--char-w) + var(--gap))) 0 100%/ calc(var(--in-w) - var(--gap)) 1rem no-repeat;
+}
+
+@keyframes shake {
+    0% { margin-left: 0; }
+    25% { margin-left: 1rem; }
+    75% { margin-left: -1rem; }
+    100% { margin-left: 0; }
+}

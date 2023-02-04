@@ -1,0 +1,11 @@
+.HeaderBanner {
+    height: 10vh;
+    border-bottom: 5px #F5DEB3 solid;
+}
+
+.HeaderBanner nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

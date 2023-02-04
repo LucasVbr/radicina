@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HeaderBanner from './components/HeaderBanner';
+import GameContent from './components/GameContent';
+import questions from "./questions.json";
+import type Question from './models/Question';
 
-function App() {
+export default function App() {
+  const randomQuestion: Question = questions[0] as Question; // TODO use random
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={"App"}>
+      <HeaderBanner/>
+      <GameContent question={randomQuestion}/>
     </div>
   );
 }
-
-export default App;

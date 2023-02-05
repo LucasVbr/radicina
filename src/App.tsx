@@ -6,7 +6,9 @@ import questions from "./questions.json";
 import type Question from './models/Question';
 
 export default function App() {
-  const randomQuestion: Question = questions[0] as Question; // TODO use random
+
+
+    const randomQuestion: Question = questions[Math.floor(Math.random() * questions.length)] as Question;
 
   return (
     <div className={"App"}>

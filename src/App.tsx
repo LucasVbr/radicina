@@ -9,6 +9,7 @@ export default function App() {
 
 
     const randomQuestion: Question = questions[Math.floor(Math.random() * questions.length)] as Question;
+    document.title = "Radicina";
 
   return (
     <div className={"App"}>

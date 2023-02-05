@@ -31,7 +31,6 @@ export default function GameContent(props: Props) {
       return;
     }
 
-    // Ajoute un point + change de mot
     return;
   }
 

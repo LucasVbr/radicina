@@ -6,11 +6,11 @@ export default function HeaderBanner() {
         <nav>
           <div></div>
           <div>
-            <img src={"./logo.png"}/>
+            <img height={200} src={"./logo.png"}/>
           </div>
           <div>
-            <img src={"./volume.png"}/>
-            <img src={"./roue.png"}/>
+            <img width={80} src={"./volume.png"}/>
+            <img width={80} src={"./roue.png"}/>
           </div>
         </nav>
       </div>

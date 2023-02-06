@@ -31,6 +31,7 @@ export default function GameContent(props: Props) {
       return;
     }
 
+    window.location.reload();
     return;
   }
 
